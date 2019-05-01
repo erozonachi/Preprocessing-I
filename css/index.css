@@ -134,3 +134,88 @@ html,
 body {
   height: 100%;
 }
+:root {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 0.3em dashed #00b3b3;
+  padding: 1em;
+  border-radius: 1em 0 1em 0;
+}
+.container header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+.container header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin: 1em 0 3em 0;
+}
+.container header nav a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  margin: 0 1em;
+  color: #aaaaaa;
+}
+.container header nav a:hover {
+  color: #006667;
+}
+.container header section {
+  background-color: teal;
+  padding: 1em 0;
+}
+.container header section .display-pic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.container header section .display-pic img {
+  border: 1em solid white;
+  border-radius: 50%;
+}
+.container header section h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 3.4rem;
+  padding: 0.13em;
+}
+.container header section h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2.4rem;
+  padding: 0.25em;
+}
+.container header section hr {
+  color: white;
+  margin: 1em 0;
+}
+.container header section p {
+  font-size: 1.6rem;
+  padding: 0.5em;
+}
+.container header section p strong {
+  font-weight: bold;
+}
+.container header section button {
+  font-size: 2rem;
+  padding: 1em 2em;
+  margin: 1em;
+  border: none;
+  border-radius: 0.25em;
+  background-color: #004d4d;
+  color: white;
+  cursor: pointer;
+  align-self: center;
+}
