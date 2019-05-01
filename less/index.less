@@ -56,8 +56,18 @@ table {
 html, body {
     height: 100%;
 }
+
+@primary-color: teal;
+@white-color: white;
+@black-color: black;
+@mobile-view: ~"screen and (max-width: 500px)";
+
 :root {
 	font-size: 62.5%;
+
+	@media @mobile-view {
+		font-size: 70%;
+	}
 }
 h3 {
 	font-size: 2.4rem;
@@ -65,10 +75,6 @@ h3 {
 strong {
 	font-weight: bold;
 }
-
-@primary-color: teal;
-@white-color: white;
-@black-color: black;
 
 .flex-display(@dir, @justify, @align) {
 	display: flex;
@@ -84,6 +90,12 @@ strong {
 	padding: 1em;
 	border-radius: 1em 0 1em 0;
 
+	@media @mobile-view {
+		border: none;
+		border-radius: none;
+		padding: .5em;
+	}
+
 	header {
 		.flex-display(column, space-evenly, stretch);
 
@@ -91,11 +103,28 @@ strong {
 			.flex-display(row, flex-end, baseline);
 			margin: 1em 0 3em 0;
 
+			@media @mobile-view {
+				.flex-display(column, space-evenly, center)
+			}
+
 			a {
 				font-size: 1.6rem;
 				text-decoration: none;
 				margin: 0 1em;
 				color: #aaaaaa;
+
+				@media @mobile-view {
+					width: 100vw;
+					margin: 0;
+					text-align: center;
+					padding: .4em 0;
+					border-top: 1px solid @black-color;
+
+					&:last-child {
+						border-bottom: 1px solid @black-color;
+					}
+
+				}
 
 				&:hover {
 					color: darken(@primary-color, 5%);
@@ -190,6 +219,10 @@ strong {
 			border-radius: 1em 0 1em 0;
 			padding: 1em;
 
+			@media @mobile-view {
+				.flex-display(column, space-evenly, stretch);
+			}
+
 			.item {
 				.flex-display(column, space-evenly, stretch);
 				&:first-child {
@@ -212,6 +245,7 @@ strong {
 					border-radius: 1em;
 					font-size: 2rem;
 					padding: .5em 0;
+					margin-bottom: .5em;
 					text-align: center;
 				}
 			}
