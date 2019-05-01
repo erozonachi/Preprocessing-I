@@ -151,4 +151,58 @@ html, body {
 			}
 		}
 	}
+
+	main {
+		.main-container {
+			.flex-display(column, space-evenly, stretch);
+
+			section {
+				.flex-display(column, space-evenly, stretch);
+			}
+		}
+	}
+}
+
+.main-container {
+	section {
+		h3 {
+			font-size: 2.4rem;
+			padding: .25em;
+			margin-top: .75em;
+		}
+
+		.media-container {
+			.flex-display(row, space-evenly, center);
+			margin-top: 1em;
+			background-color: @primary-color;
+			border-radius: 1em 0 1em 0;
+			padding: 1em;
+
+			.item {
+				.flex-display(column, space-evenly, stretch);
+				&:first-child {
+					margin-right: .5em;
+				}
+				&:last-child {
+					margin-left: .5em;
+				}
+
+				img {
+					width: 100%;
+					background-color: @white-color;
+					border: 1em solid @white-color;
+					border-radius: 1em;
+					margin-bottom: 1em;
+				}
+
+				p {
+					background-color: @white-color;
+					border-radius: 1em;
+					font-size: 2rem;
+					padding: .5em 0;
+					text-align: center;
+				}
+			}
+		}
+	}
 }
