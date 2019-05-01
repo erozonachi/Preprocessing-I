@@ -59,6 +59,12 @@ html, body {
 :root {
 	font-size: 62.5%;
 }
+h3 {
+	font-size: 2.4rem;
+}
+strong {
+	font-weight: bold;
+}
 
 @primary-color: teal;
 @white-color: white;
@@ -120,7 +126,6 @@ html, body {
 	
 			h3 {
 				.flex-display(row, space-evenly, center);
-				font-size: 2.4rem;
 				padding: .25em;
 			}
 	
@@ -132,10 +137,6 @@ html, body {
 			p {
 				font-size: 1.6rem;
 				padding: .5em;
-
-				strong {
-					font-weight: bold;
-				}
 			}
 	
 			button {
@@ -161,12 +162,23 @@ html, body {
 			}
 		}
 	}
+
+	footer {
+		font-size: 1.6em;
+		h3 {
+			margin: 1em 0;
+		}
+		span {
+			.flex-display(row, space-evenly, center);
+			padding: .25em;
+			margin-top: 2em;
+		}
+	}
 }
 
 .main-container {
 	section {
 		h3 {
-			font-size: 2.4rem;
 			padding: .25em;
 			margin-top: .75em;
 		}
